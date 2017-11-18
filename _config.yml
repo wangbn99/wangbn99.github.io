@@ -14,7 +14,7 @@ source:         "."
 destination:    ./_gh_pages
 port:           9001
 baseurl:        "comtwins.com"
-url:            "https://comtwins.com"
+url:            "http://comtwins.com"
 encoding:       UTF-8
 exclude:
   - .git/
