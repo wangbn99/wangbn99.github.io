@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependencies
 markdown:       kramdown
 highlighter:    rouge
@@ -74,3 +75,15 @@ cdn:
   jquery_hash:      "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
   popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
   popper_hash:      "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+=======
+# site settings
+gems:
+title: comtwins home page
+realName_en: comtwin.com
+realName_cn: comtwins.com
+email: wangbn1199@gmail.com
+description:
+baseurl: "comtwins.com"
+url: "comtwins.com"
+github_username: wangbn99
+>>>>>>> ecfc599a451ba667e112204526a2e320a0e18f41
