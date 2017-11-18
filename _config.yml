@@ -1,0 +1,10 @@
+# site settings
+gems:
+title: comtwins home page
+realName_en: comtwin.com
+realName_cn: comtwins.com
+email: wangbn1199@gmail.com
+description:
+baseurl: "comtwins.com"
+url: "comtwins.com"
+github_username: wangbn99
