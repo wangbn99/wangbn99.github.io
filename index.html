@@ -258,6 +258,10 @@
 				var txt= $(this).text();
 				var attr= $(this).attr("id");
 				$("#current_category").text(txt);
+				$.get("/" + attr + "/content.json", function(data){
+				    alert(data);
+                   #$("#result").html(data);
+                });
 			});
 			$("#post_content").load("ryqf.htm")
         });
