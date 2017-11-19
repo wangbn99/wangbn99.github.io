@@ -257,7 +257,7 @@
 			$('[id^=cat_]').click(function(){
 				var txt=$(this).text();
 				var attr=$(this).attr("id");
-				var path="/" + attr + "/content.json";
+				var path="/".concat(attr, "/content.json");
 				alert(path);
 				$("#current_category").text(txt);
 				$.get(path, function(data){
