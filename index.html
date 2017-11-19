@@ -256,13 +256,13 @@
 			});
 			$('[id^=cat_]').click(function(){
 				var cname=$(this).text();
-				var attr=$(this).attr("id");
+				var cid=$(this).attr("id");
 				$("#current_category").text(cname);
 				$("#current_list").html("");
-				var path="/".concat(attr, "/content.json");
-				$.getJSON(path, function(result){
+				var url="/".concat(cid, "/content.json");
+				$.getJSON(url, function(result){
 					$.each(result, function(i, field){
-					    $("#current_list").append("field" + i);
+					    $("#current_list").append("<li><a href='/" + cid + "/" + field.url + "'>" + field.title+ "</a></li>");
 					});
 				});
 			});
