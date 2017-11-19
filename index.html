@@ -258,10 +258,10 @@
 				var txt=$(this).text();
 				var attr=$(this).attr("id");
 				var path="/".concat(attr, "/content.json");
-				alert(path);
 				$("#current_category").text(txt);
-				$.get(path, function(data){
-				    $("#current_list").text(data);
+				$.get(path, function(data, status){
+				    #$("#current_list").text(data);
+					alert("Data: " + data + "\nStatus: " + status);
                 });
 			});
         });
