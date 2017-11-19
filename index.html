@@ -262,7 +262,7 @@
 				var path="/".concat(attr, "/content.json");
 				$.getJSON(path, function(result){
 					$.each(result, function(i, field){
-					    $("#current_list").append(field + " ");
+					    $("#current_list").append("field" + i);
 					});
 				});
 			});
