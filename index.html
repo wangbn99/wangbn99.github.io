@@ -261,7 +261,7 @@
 				alert(path);
 				$("#current_category").text(txt);
 				$.get(path, function(data){
-				    alert(data);
+				    $(".list-unstyled").html(data);
                 });
 			});
         });
