@@ -109,8 +109,8 @@
           <!-- Sub category title -->
           <div class="card my-4">
             <h5 class="card-header" id="current_category">大数据</h5>
-            <div id="current_list" class="card-body">
-			  <ul class="list-unstyled mb-0">
+            <div class="card-body">
+			  <ul id="current_list" class="list-unstyled mb-0">
 				<li>
 				  <a href="#">Hadoop平台</a>
 				</li>
@@ -255,14 +255,16 @@
 				$(this).addClass("active");
 			});
 			$('[id^=cat_]').click(function(){
-				var txt=$(this).text();
+				var cname=$(this).text();
 				var attr=$(this).attr("id");
+				$("#current_category").text(cname);
+				$("#current_list").html("");
 				var path="/".concat(attr, "/content.json");
-				$("#current_category").text(txt);
-				$.get(path, function(data, status){
-				    /*$("#current_list").text(data);*/
-					alert("Data: " + data + "\nStatus: " + status);
-                });
+				$.getJSON(path, function(result){
+					$.each(result, function(i, field){
+					    $("#current_list").append(field + " ");
+					});
+				});
 			});
         });
     </script>
