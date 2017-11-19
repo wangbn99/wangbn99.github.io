@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="博客网站，主题包括：房地产、留学、大多在区生活，以及大数据、AI和机器学习等">
+    <meta name="description" content="博客网站，主题包括：房地产、留学、大多地区生活，以及大数据、AI和机器学习等">
     <meta name="author" content="comtwins">
 
     <title>Comtwins Home Page</title>
@@ -24,15 +24,16 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
-        <a class="navbar-brand" href="#"><img class="img-fluid rounded" src="images/logo.png" alt="">Comtwins</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+	    <div class="navbar-header">
+			<a class="navbar-brand" href="#"><img class="img-fluid rounded" src="images/logo.png" alt="">Comtwins</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
@@ -78,20 +79,26 @@
                 <div class="col-lg-6">
                   <ul class="list-unstyled mb-0">
                     <li>
-                      <a href="#">Real Estate</a>
+                      <a id="cat_real_estate" href="#">房地产</a>
                     </li>
                     <li>
-                      <a href="#">Big Data</a>
+                      <a id="cat_Study abroad" href="#">留学</a>
+                    </li>
+                    <li>
+                      <a id="cat_canadian_life" href="#">加国生活</a>
                     </li>
                   </ul>
                 </div>
                 <div class="col-lg-6">
                   <ul class="list-unstyled mb-0">
                     <li>
-                      <a href="#">Big Data</a>
+                      <a id="cat_bigdata" href="#">大数据</a>
                     </li>
                     <li>
-                      <a href="#">AI</a>
+                      <a id="cat_ai" href="#">人工智能</a>
+                    </li>
+                    <li>
+                      <a id="cat_ml" href="#">机器学习</a>
                     </li>
                   </ul>
                 </div>
@@ -99,14 +106,33 @@
             </div>
           </div>
 
+          <!-- Sub category title -->
+          <div class="card my-4">
+            <h5 class="card-header" id="current_category">大数据</h5>
+            <div class="card-body">
+			  <ul class="list-unstyled mb-0">
+				<li>
+				  <a href="#">Hadoop平台</a>
+				</li>
+				<li>
+				  <a href="#">Spark简介</a>
+				</li>
+				<li>
+				  <a href="#">RDD是什么</a>
+				</li>
+			  </ul>
+            </div>
+          </div>
+
           <!-- Side Widget -->
+		  <!--
           <div class="card my-4">
             <h5 class="card-header">Side Widget</h5>
             <div class="card-body">
               You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
             </div>
           </div>
-
+		  -->
         </div>
 
 
@@ -114,27 +140,26 @@
         <div class="col-lg-9">
 
           <!-- Title -->
-          <h1 class="mt-4">My Test Post</h1>
+          <h1 class="mt-4" id="post_title">My Test Post</h1>
 
           <!-- Author -->
-          <p class="lead">
-            by
-            <a href="#">Comtwins</a>
-          </p>
+          <p class="lead" id="post_author">by Comtwins</p>
 
           <hr>
 
           <!-- Date/Time -->
-          <p>Posted on January 1, 2017 at 12:00 PM</p>
+          <p id="post_time">Posted on January 1, 2017 at 12:00 PM</p>
 
           <hr>
 
           <!-- Preview Image -->
+		  <!--
           <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
-
           <hr>
+		  -->
 
           <!-- Post Content -->
+		  <div id="post_content">
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
@@ -152,6 +177,7 @@
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
 
+		  </div>
           <hr>
 
           <!-- Comments Form -->
@@ -168,15 +194,17 @@
           </div>
 
           <!-- Single Comment -->
+		  <!--
           <div class="media mb-4">
             <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
             <div class="media-body">
-              <h5 class="mt-0">Commenter Name</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              <h5 class="mt-0">管理员</h5>
+              当前评论被禁止！
             </div>
           </div>
-
+		  -->
           <!-- Comment with nested comments -->
+		  <!--
           <div class="media mb-4">
             <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
             <div class="media-body">
@@ -201,7 +229,7 @@
 
             </div>
           </div>
-
+          -->
         </div>
 
       </div>
@@ -209,7 +237,7 @@
 
     </div>
     <!-- /.container -->
-
+<iframe src= "ryqf.mht" width="100%" height="800"> </iframe>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
@@ -221,7 +249,20 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script type="text/javascript">
+        $(document).ready(function(){
+			$(".nav-item").click(function(){
+				$(".nav-item").removeClass("active");
+				$(this).addClass("active");
+			});
+			$('[id^=cat_]').click(function(){
+				var txt= $(this).text();
+				var attr= $(this).attr("id");
+				$("#current_category").text(txt);
+			});
+			$("#post_content").load("ryqf.mht")
+        });
+    </script>
   </body>
 
 </html>
