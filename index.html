@@ -218,9 +218,8 @@
 				$(this).addClass("active");
 			});
 			$("#categories").load('content.html');
-			var obj = $("#categories li > a").eq(4);
-			$("#current_category").text(obj.text());
-			$("#current_list").load("/".concat(obj.attr('id'), "/content.json"));
+			$("#current_category").text($("#categories li > a").eq(4).text());
+			$("#current_list").load("/".concat($("#categories li > a").eq(4).attr('id'), "/content.json"));
 			$('[id^=cat_]').click(function(){
 				var cname=$(this).text();
 				var cid=$(this).attr("id");
