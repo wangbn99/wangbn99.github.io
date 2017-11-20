@@ -263,10 +263,8 @@
 				$.getJSON(url, function(result){
 				    var html="";
 					$.each(result, function(i, field){
-					    html=html.concat("<li><a href='/",cid,"/",field.url,"'>",field.title,"</a></li>");
+					    $("#current_list").append(concat("<li><a href='/",cid,"/",field.url,"'>",field.title,"</a></li>"));
 					});
-					alert(html);
-					$("#current_list").html(html)
 				});
 			});
         });
