@@ -262,7 +262,7 @@
 				var url="/".concat(cid, "/content.json");
 				$.getJSON(url, function(result){
 					$.each(result, function(i, field){
-					    $("#current_list").append("<li><a href='/" + cid + "/" + field.url + "'>" + field.title+ "</a></li>");
+					    $("#current_list").html("<li><a href='/" + cid + "/" + field.url + "'>" + field.title+ "</a></li>");
 					});
 				});
 			});
