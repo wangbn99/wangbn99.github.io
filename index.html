@@ -221,7 +221,7 @@
 			$("#categories").load('content.html',function(){
 				$("#categories li > a").click(function(){
 					$("#current_category").text($(this).text());
-					current_path="/".concat($(this).attr("id"));
+					current_path="/".concat($(this).attr("id"),"/");
 					$("#current_list").load(current_path.concat("/content.html"),function(){
 						$("#current_list li > a").click(function(event){
 						    event.preventDefault();
