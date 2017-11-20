@@ -103,17 +103,22 @@
         <div class="col-lg-9">
 
           <!-- Title -->
+		  <!--
           <h1 class="mt-4" id="post_title">My Test Post</h1>
+		  -->
 
           <!-- Author -->
+		  <!--
           <p class="lead" id="post_author">by Comtwins</p>
 
           <hr>
+		  -->
 
           <!-- Date/Time -->
+		  <!--
           <p id="post_time">Posted on January 1, 2017 at 12:00 PM</p>
-
           <hr>
+		  -->
 
           <!-- Preview Image -->
 		  <!--
@@ -123,6 +128,7 @@
 
           <!-- Post Content -->
 		  <div id="post_content">
+		  <!--
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
@@ -139,6 +145,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+		  -->
 
 		  </div>
           <hr>
@@ -219,9 +226,10 @@
 				$(this).addClass("active");
 			});
 			$("#categories").load('content.html',function(){
-				$("#categories li > a").click(function(){
+				$("#categories li > a").click(function(event){
+				    event.preventDefault();
 					$("#current_category").text($(this).text());
-					current_path="/".concat($(this).attr("id"),"/");
+					current_path="/".concat($(this).attr("href"),"/");
 					$("#current_list").load(current_path.concat("/content.html"),function(){
 						$("#current_list li > a").click(function(event){
 						    event.preventDefault();
