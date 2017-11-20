@@ -218,20 +218,14 @@
 				$(this).addClass("active");
 			});
 			$("#categories").load('content.html');
-			alert($("#categories>a:first").attr('href'))
-			$("#current_list").load('cat_ai/content.html');
 			$('[id^=cat_]').click(function(){
 				var cname=$(this).text();
 				var cid=$(this).attr("id");
 				$("#current_category").text(cname);
-				$("#current_list").html("");
-				$("#current_list").append('<ul id="test_id" class="list-unstyled mb-0">');
 				var url="/".concat(cid, "/content.json");
-				var obj= $.getJSON(url)
-				alert(obj.status);
-				alert(obj.responseText);
-				$("#current_list").append('</ul>');
+				$("#current_list").load(url);
 			});
+			$("#categories>a").eq(0).click()
         });
     </script>
   </body>
