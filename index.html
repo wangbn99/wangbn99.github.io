@@ -262,8 +262,8 @@
 				$("#current_list").append('<ul id="test_id" class="list-unstyled mb-0">');
 				var url="/".concat(cid, "/content.json");
 				var obj= $.getJSON(url)
-				alert(a.status);
-				alert(a.responseText);
+				alert(obj.status);
+				alert(obj.responseText);
 				$("#current_list").append('</ul>');
 			});
         });
