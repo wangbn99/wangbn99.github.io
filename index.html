@@ -263,6 +263,8 @@
 				var html='<ul class="list-unstyled mb-0">';
 				var url="/".concat(cid, "/content.json");
 				$.getJSON(url, function(result){
+				    html=html.concat("==========================");
+					alert(result.toString());
 					$.each(result, function(i, field){
 					    /*$("#current_list").append(concat("<li><a href='/",cid,"/",field.url,"'>",field.title,"</a></li>"));*/
 						html=html.concat("aaaaaaaaaaaaaaaaaaaaaaaaa");
