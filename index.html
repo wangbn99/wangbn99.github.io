@@ -262,12 +262,9 @@
 				$("#current_list").append('<ul id="test_id" class="list-unstyled mb-0">');
 				var url="/".concat(cid, "/content.json");
 				var obj= $.getJSON(url)
-				if (a.status == 200){
-				    alert(a.responseText);
-					/*$.each(a.responseText, function(i, field){
-					    $("#current_list").append(concat("<li><a href='/",cid,"/",field.url,"'>",field.title,"</a></li>"));*/
-				}
-						$("#current_list").append('</ul>');
+				alert(a.status);
+				alert(a.responseText);
+				$("#current_list").append('</ul>');
 			});
         });
     </script>
