@@ -109,8 +109,8 @@
           <!-- Sub category title -->
           <div class="card my-4">
             <h5 class="card-header" id="current_category">大数据</h5>
-            <div class="card-body">
-			  <ul id="current_list" class="list-unstyled mb-0">
+            <div id="current_list" class="card-body">
+			  <ul class="list-unstyled mb-0">
 				<li>
 				  <a href="#">Hadoop平台</a>
 				</li>
@@ -259,13 +259,14 @@
 				var cid=$(this).attr("id");
 				$("#current_category").text(cname);
 				$("#current_list").html("");
+				$("#current_list").append('<ul class="list-unstyled mb-0">');
 				var url="/".concat(cid, "/content.json");
 				$.getJSON(url, function(result){
-				    var html="";
 					$.each(result, function(i, field){
 					    $("#current_list").append(concat("<li><a href='/",cid,"/",field.url,"'>",field.title,"</a></li>"));
 					});
 				});
+				$("#current_list").append('</ul>');
 			});
         });
     </script>
