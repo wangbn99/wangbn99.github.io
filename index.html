@@ -212,6 +212,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
+	    var current_path="/";
         $(document).ready(function(){
 			$(".nav-item").click(function(){
 				$(".nav-item").removeClass("active");
@@ -220,9 +221,10 @@
 			$("#categories").load('content.html',function(){
 				$("#categories li > a").click(function(){
 					$("#current_category").text($(this).text());
-					$("#current_list").load("/".concat($(this).attr("id"), "/content.json"),function(){
+					current_path="/".concat($(this).attr("id"));
+					$("#current_list").load(current_path.concat("/content.json"),function(){
 						$("#current_list li > a").click(function(){
-							$("#post_content").load($(this).attr("id"));
+							$("#post_content").load(current_path.concat($(this).attr("href")));
 						});
 					});
 				});
