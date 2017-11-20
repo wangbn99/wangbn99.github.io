@@ -110,17 +110,6 @@
           <div class="card my-4">
             <h5 class="card-header" id="current_category">大数据</h5>
             <div id="current_list" class="card-body">
-			  <ul class="list-unstyled mb-0">
-				<li>
-				  <a href="#">Hadoop平台</a>
-				</li>
-				<li>
-				  <a href="#">Spark简介</a>
-				</li>
-				<li>
-				  <a href="#">RDD是什么</a>
-				</li>
-			  </ul>
             </div>
           </div>
 
@@ -254,6 +243,7 @@
 				$(".nav-item").removeClass("active");
 				$(this).addClass("active");
 			});
+			$("#current_list").load('cat_ai/content.html');
 			$('[id^=cat_]').click(function(){
 				var cname=$(this).text();
 				var cid=$(this).attr("id");
