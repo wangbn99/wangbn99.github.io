@@ -217,16 +217,14 @@
 				$(".nav-item").removeClass("active");
 				$(this).addClass("active");
 			});
-			$("#categories").load('content.html',function(){
-				$("#current_category").text($("#categories li > a").eq(4).text());
-				$("#current_list").load("/".concat($("#categories li > a").eq(4).attr('id'), "/content.json"));
-			});
 			$('[id^=cat_]').click(function(){
-				var cname=$(this).text();
-				var cid=$(this).attr("id");
-				$("#current_category").text(cname);
-				var url="/".concat(cid, "/content.json");
-				$("#current_list").load(url);
+				$("#current_category").text($(this).text());
+				$("#current_list").load("/".concat($(this).attr("id"), "/content.json"));
+			});
+			$("#categories").load('content.html',function(){
+				/*$("#current_category").text($("#categories li > a").eq(4).text());
+				$("#current_list").load("/".concat($("#categories li > a").eq(4).attr('id'), "/content.json"));*/
+				$("#current_category").text($("#categories li > a").eq(4).click();
 			});
         });
     </script>
