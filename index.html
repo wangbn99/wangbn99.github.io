@@ -218,6 +218,9 @@
 				$(this).addClass("active");
 			});
 			$("#categories").load('content.html');
+			var obj = $("#categories li > a").eq(4);
+			$("#current_category").text(obj.text());
+			$("#current_list").load("/".concat(cid, "/content.json"));
 			$('[id^=cat_]').click(function(){
 				var cname=$(this).text();
 				var cid=$(this).attr("id");
@@ -225,7 +228,6 @@
 				var url="/".concat(cid, "/content.json");
 				$("#current_list").load(url);
 			});
-			$("#categories li > a").eq(4).click();
         });
     </script>
   </body>
