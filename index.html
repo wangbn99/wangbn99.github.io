@@ -218,13 +218,13 @@
 				$(this).addClass("active");
 			});
 			$('[id^=cat_]').click(function(){
+			    alert("===================");
 				$("#current_category").text($(this).text());
 				$("#current_list").load("/".concat($(this).attr("id"), "/content.json"));
 			});
 			$("#categories").load('content.html',function(){
-				/*$("#current_category").text($("#categories li > a").eq(4).text());
-				$("#current_list").load("/".concat($("#categories li > a").eq(4).attr('id'), "/content.json"));*/
-				$("#categories li > a").eq(4).click();
+				$("#current_category").text($("#categories li > a").eq(4).text());
+				$("#current_list").load("/".concat($("#categories li > a").eq(4).attr('id'), "/content.json"));
 			});
         });
     </script>
