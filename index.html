@@ -220,11 +220,13 @@
 			$("#categories").load('content.html',function(){
 				$("#categories li > a").click(function(){
 					$("#current_category").text($(this).text());
-					$("#current_list").load("/".concat($(this).attr("id"), "/content.json"));
+					$("#current_list").load("/".concat($(this).attr("id"), "/content.json"),function(){
+						$("#current_list li > a").click(function(){
+							$("#post_content").load($(this).attr("id"));
+						});
+					});
 				});
 				$("#categories li > a").eq(4).click();
-				/*$("#current_category").text($("#categories li > a").eq(4).text());
-				$("#current_list").load("/".concat($("#categories li > a").eq(4).attr('id'), "/content.json"));*/
 			});
         });
     </script>
