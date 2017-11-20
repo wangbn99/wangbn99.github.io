@@ -259,11 +259,10 @@
 				var cid=$(this).attr("id");
 				$("#current_category").text(cname);
 				$("#current_list").html("");
-				/*$("#current_list").append('<ul class="list-unstyled mb-0">');*/
-				$("#current_list").append('<ul class="list-unstyled mb-0">');
+				$("#current_list").append('<ul id="test_id" class="list-unstyled mb-0">');
 				var url="/".concat(cid, "/content.json");
 				$.getJSON(url, function(result,status){
-				    $("#current_list").append("==========================");
+				    $("#current_list").append("<li>==========================</li>");
 				    $("#current_list").append("status:" + status);
 					$.each(result, function(i, field){
 					    /*$("#current_list").append(concat("<li><a href='/",cid,"/",field.url,"'>",field.title,"</a></li>"));*/
